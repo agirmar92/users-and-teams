@@ -1,0 +1,40 @@
+<h3>Leader</h3>
+<div class="user-card-container">
+  <md-card class="user-card">
+    <md-card-header>
+      <div md-card-avatar class="user-avatar"></div>
+      <md-card-title>{{ teamDetails.lead.name }}</md-card-title>
+      <md-card-subtitle>{{ teamDetails.lead.username }}</md-card-subtitle>
+    </md-card-header>
+    <md-card-content>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit gravida lectus, et hendrerit justo faucibus vel.
+        Nullam posuere consequat tempus. Duis interdum diam vel dui maximus ornare.
+      </p>
+    </md-card-content>
+  </md-card>
+</div>
+
+<h3>Members</h3>
+<div class="user-card-container">
+  <md-card class="user-card" *ngFor="let user of teamDetails.members">
+    <md-card-header>
+      <div md-card-avatar class="user-avatar"></div>
+      <md-card-title>{{ user.name }}</md-card-title>
+      <md-card-subtitle>{{ user.username }}</md-card-subtitle>
+    </md-card-header>
+    <md-card-content>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit gravida lectus, et hendrerit justo faucibus vel.
+        Nullam posuere consequat tempus. Duis interdum diam vel dui maximus ornare.
+      </p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-button color="warn">Remove</button>
+    </md-card-actions>
+  </md-card>
+</div>
+
+<md-action-row>
+  <button md-raised-button color="primary" (click)="openAddMembersDialog()">Add members</button>
+</md-action-row>

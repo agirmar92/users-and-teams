@@ -1,0 +1,35 @@
+.user-avatar {
+    background-image: url('https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png');
+    background-color: #9D9D9D;
+    background-size: cover
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+.user-card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.user-card {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+    max-width: 200px;
+    margin: 5px;
+}
+
+.user-card md-card-title {
+    margin-bottom: 8px;
+}
