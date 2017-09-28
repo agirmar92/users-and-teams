@@ -11,10 +11,17 @@ export class TeamService {
     private http: HttpClient
   ) { }
 
+  /**
+   * Fetches all teams
+   */
   getAllTeams(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
 
+  /**
+   * Fetches a detailed object for the team with the given id
+   * @param teamId
+   */
   getTeamById(teamId): Observable<any> {
     return this.http.get(`${this.apiUrl}${teamId}`);
   }

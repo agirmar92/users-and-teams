@@ -11,10 +11,17 @@ export class UserService {
     private http: HttpClient
   ) { }
 
+  /**
+   * Fetches all users
+   */
   getAllUsers(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
 
+  /**
+   * Fetches a detailed object for the user with the given id
+   * @param userId
+   */
   getUserById(userId): Observable<any> {
     return this.http.get(`${this.apiUrl}${userId}`);
   }
