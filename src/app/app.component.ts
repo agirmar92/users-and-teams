@@ -23,19 +23,16 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.userService.getAllUsers()
-    //   .subscribe(res => {
-    //     this.users = res;
-    //     console.log(res);
-    //   }, err => {
-    //     console.log(err);
-    //   });
-
     this.fetchingTeams = true;
-    setTimeout(() => {
-      this.teams = this.teamService.getAllTeams();
-      this.fetchingTeams = false;
-    }, 1000);
+    this.teamService.getAllTeams().subscribe(
+      teams => {
+        this.teams = teams;
+      }, error => {
+        console.log(error);
+      }, () => {
+        this.fetchingTeams = false;
+      }
+    );
   }
 
 }

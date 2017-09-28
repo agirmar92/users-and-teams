@@ -6,6 +6,6 @@ export interface Team {
 }
 
 export interface TeamDetails extends Team {
-    lead: UserDetails;
-    members: Array<UserDetails>;
+    lead: number;
+    members: Array<number>;
 }

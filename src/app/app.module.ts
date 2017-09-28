@@ -7,7 +7,8 @@ import {
   MdCardModule,
   MdExpansionModule,
   MdIconModule,
-  MdDialogModule
+  MdDialogModule,
+  MdTableModule
 } from '@angular/material';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 
@@ -16,11 +17,16 @@ import { TeamComponent } from './team/team.component';
 
 import { UserService } from '../services/user.service';
 import { TeamService } from '../services/team.service';
+import { ManageUsersDialogComponent } from './manage-users-dialog/manage-users-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TeamComponent
+    TeamComponent,
+    ManageUsersDialogComponent
+  ],
+  entryComponents: [
+    ManageUsersDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +37,7 @@ import { TeamService } from '../services/team.service';
     MdExpansionModule,
     MdIconModule,
     MdDialogModule,
+    MdTableModule,
     HttpClientModule,
     HttpClientJsonpModule
   ],

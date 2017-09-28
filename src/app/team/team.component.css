@@ -1,5 +1,5 @@
 .user-avatar {
-    background-image: url('https://cdn.pixabay.com/photo/2015/03/04/22/35/head-659651_960_720.png');
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Linecons_user-avatar.svg/768px-Linecons_user-avatar.svg.png');
     background-color: #9D9D9D;
     background-size: cover
 }
@@ -32,4 +32,8 @@ h3 {
 
 .user-card md-card-title {
     margin-bottom: 8px;
+}
+
+.small-spinner {
+    width: 50px;
 }
